@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOINT ESSENTIAL - Colágeno Tipo 2 UC-II® para Articulações Livres</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Cores principais - Tema escuro e bombástico (MANTIDO ORIGINAL) */
+            --cor-preto: #0a0a0a;
+            --cor-preto-bg: #121212;
+            --cor-vermelho: #ff003c; /* Vermelho vibrante - energia explosiva */
+            --cor-vermelho-escuro: #b3002d;
+            --cor-cinza-escuro: #1a1a1a;
+            --cor-cinza: #2a2a2a;
+            --cor-branco: #ffffff;
+            --cor-dourado: #ffd700;
+            --cor-neon: #00ff9d; /* Verde neon para contraste */
+            
+            /* Cores de gradientes (MANTIDO ORIGINAL) */
+            --gradiente-vermelho: linear-gradient(135deg, #ff003c, #ff3300);
+            --gradiente-preto: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+            --gradiente-neon: linear-gradient(135deg, #00ff9d, #00ccff);
+            
+            /* Efeitos de brilho (MANTIDO ORIGINAL) */
+            --brilho-vermelho: 0 0 20px rgba(255, 0, 60, 0.7);
+            --brilho-neon: 0 0 20px rgba(0, 255, 157, 0.7);
+            --brilho-dourado: 0 0 20px rgba(255, 215, 0, 0.7);
+            
+            /* Transições (MANTIDO ORIGINAL) */
+            --transicao: all 0.3s ease;
+            --transicao-lenta: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background-color: var(--cor-preto-bg);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .bg-preto {
+            background-color: var(--cor-preto);
+            background: var(--gradiente-preto);
+            color: var(--cor-branco);
+            position: relative;
+        }
+        
+        .bg-preto::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradiente-vermelho);
+            z-index: 1;
+        }
+        
+        .bg-cinza {
+            background-color: var(--cor-cinza-escuro);
+            background: linear-gradient(135deg, #1a1a1a, #252525);
+            color: var(--cor-branco);
+        }
+        
+        .bg-vermelho {
+            background-color: var(--cor-vermelho-escuro);
+            background: var(--gradiente-vermelho);
+            color: var(--cor-branco);
+        }
+        
+        .bg-neon {
+            background-color: #001a14;
+            background: linear-gradient(135deg, #001a14, #003329);
+            color: var(--cor-branco);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--gradiente-vermelho);
+            color: white;
+            padding: 22px 50px;
+            border-radius: 60px;
+            font-weight: 900;
+            font-size: 1.2rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: var(--transicao);
+            box-shadow: var(--brilho-vermelho);
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: var(--transicao);
+            z-index: -1;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 0, 60, 0.9), 0 0 40px rgba(255, 0, 60, 0.5);
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .mb-30 {
+            margin-bottom: 30px;
+        }
+        
+        .mb-50 {
+            margin-bottom: 50px;
+        }
+        
+        .destaque {
+            color: var(--cor-vermelho);
+            text-shadow: 0 0 10px rgba(255, 0, 60, 0.5);
+        }
+        
+        .destaque-neon {
+            color: var(--cor-neon);
+            text-shadow: var(--brilho-neon);
+        }
+        
+        /* Seção Hero - SEM FOTO (CORRIGIDO) */
+        .hero {
+            padding: 120px 0 100px;
+            position: relative;
+            overflow: hidden;
+            background: var(--gradiente-preto); /* APENAS COR SÓLIDA SEM FOTO */
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(255, 0, 60, 0.15) 100%);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-text {
+            flex: 1;
+        }
+        
+        .hero-visual {
+            flex: 1;
+            position: relative;
+        }
+        
+        .hero h1 {
+            font-size: 3.8rem;
+            margin-bottom: 25px;
+            line-height: 1.1;
+            background: linear-gradient(90deg, #ff003c, #ff6600);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+        
+        .hero-product {
+            width: 100%;
+            max-width: 550px;
+            filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.5));
+            animation: flutuar 6s ease-in-out infinite; /* ANIMAÇÃO MANTIDA */
+            border-radius: 20px;
+            transform: perspective(1000px) rotateY(-10deg); /* EFEITO 3D MANTIDO */
+            border: 3px solid var(--cor-vermelho);
+            box-shadow: var(--brilho-vermelho);
+        }
+        
+        .hero-influencer {
+            position: absolute;
+            bottom: -40px;
+            right: 30px;
+            width: 200px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), var(--brilho-vermelho);
+            border: 5px solid var(--cor-vermelho);
+            transform: rotate(5deg);
+            z-index: 3;
+        }
+        
+        .badge-hero {
+            position: absolute;
+            top: 30px;
+            left: -20px;
+            background: var(--gradiente-neon);
+            color: var(--cor-preto);
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: 0.9rem;
+            box-shadow: var(--brilho-neon);
+            transform: rotate(-5deg);
+            z-index: 4;
+        }
+        
+        /* NOVA: Galeria do Produto */
+        .galeria-produto {
+            padding: 80px 0;
+            background: var(--cor-preto);
+        }
+        
+        .galeria-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .produto-foto {
+            width: 100%;
+            border-radius: 20px;
+            border: 3px solid var(--cor-vermelho);
+            box-shadow: var(--brilho-vermelho);
+            transition: var(--transicao-lenta);
+        }
+        
+        .produto-foto:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5), 0 0 40px rgba(255, 0, 60, 0.5);
+        }
+        
+        .produto-legenda {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.1rem;
+            color: var(--cor-branco);
+        }
+        
+        /* Seção Problema + Desejo */
+        .problema-lista {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .problema-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px 30px;
+            border-radius: 25px;
+            text-align: center;
+            transition: var(--transicao-lenta);
+            border: 1px solid rgba(255, 0, 60, 0.2);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .problema-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradiente-vermelho);
+        }
+        
+        .problema-item:hover {
+            transform: translateY(-15px) scale(1.03);
+            border-color: var(--cor-vermelho);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(255, 0, 60, 0.3);
+        }
+        
+        .problema-item i {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            color: var(--cor-vermelho);
+            text-shadow: var(--brilho-vermelho);
+        }
+        
+        .problema-item h3 {
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+            color: var(--cor-branco);
+        }
+        
+        /* Seção Solução */
+        .soluçao-content {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+        }
+        
+        .soluçao-visual {
+            flex: 1;
+            position: relative;
+        }
+        
+        .soluçao-text {
+            flex: 1;
+        }
+        
+        .soluçao-product {
+            width: 100%;
+            max-width: 550px;
+            filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.5));
+            border-radius: 25px;
+            border: 3px solid var(--cor-neon);
+            box-shadow: var(--brilho-neon);
+            transform: perspective(1000px) rotateY(5deg); /* EFEITO 3D MANTIDO */
+        }
+        
+        .soluçao-text h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            background: linear-gradient(90deg, #00ff9d, #00ccff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .beneficios-lista {
+            margin: 40px 0;
+        }
+        
+        .beneficio-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            transition: var(--transicao);
+        }
+        
+        .beneficio-item:hover {
+            background: rgba(0, 255, 157, 0.1);
+            transform: translateX(10px);
+        }
+        
+        .beneficio-item i {
+            color: var(--cor-neon);
+            margin-right: 20px;
+            font-size: 1.8rem;
+            text-shadow: var(--brilho-neon);
+        }
+        
+        /* Seção Autoridade */
+        .autoridade-content {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+        }
+        
+        .autoridade-text {
+            flex: 1;
+        }
+        
+        .autoridade-visual {
+            flex: 1;
+            position: relative;
+        }
+        
+        .autoridade-img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 25px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), var(--brilho-vermelho);
+            border: 3px solid var(--cor-vermelho);
+        }
+        
+        .badge-autoridade {
+            position: absolute;
+            bottom: -20px;
+            right: -30px;
+            background: var(--gradiente-vermelho);
+            color: white;
+            padding: 20px 35px;
+            border-radius: 60px;
+            font-weight: 900;
+            font-size: 1.1rem;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), var(--brilho-vermelho);
+            transform: rotate(5deg);
+            z-index: 2;
+        }
+        
+        /* NOVA: Seção Professor Kakau */
+        .professor-section {
+            padding: 100px 0;
+            background: var(--cor-cinza-escuro);
+        }
+        
+        .professor-content {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+        }
+        
+        .professor-visual {
+            flex: 1;
+            position: relative;
+        }
+        
+        .professor-img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 25px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), var(--brilho-neon);
+            border: 3px solid var(--cor-neon);
+        }
+        
+        .professor-text {
+            flex: 1;
+        }
+        
+        .professor-badge {
+            position: absolute;
+            bottom: -20px;
+            left: -30px;
+            background: var(--gradiente-neon);
+            color: var(--cor-preto);
+            padding: 20px 35px;
+            border-radius: 60px;
+            font-weight: 900;
+            font-size: 1.1rem;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), var(--brilho-neon);
+            transform: rotate(-5deg);
+            z-index: 2;
+        }
+        
+        .professor-depoimento {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 25px;
+            margin-top: 40px;
+            border-left: 5px solid var(--cor-neon);
+            position: relative;
+        }
+        
+        .professor-depoimento::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 5rem;
+            color: var(--cor-neon);
+            opacity: 0.3;
+            font-family: serif;
+        }
+        
+        /* Seção Resultados */
+        .resultados-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 40px;
+            margin-top: 70px;
+        }
+        
+        .resultado-item {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 50px 30px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            transition: var(--transicao-lenta);
+            border: 2px solid rgba(255, 0, 60, 0.3);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .resultado-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradiente-neon);
+        }
+        
+        .resultado-item:hover {
+            transform: translateY(-15px) scale(1.05);
+            border-color: var(--cor-neon);
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 255, 157, 0.4);
+        }
+        
+        .resultado-item .numero {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--cor-neon);
+            margin-bottom: 15px;
+            text-shadow: var(--brilho-neon);
+        }
+        
+        .resultado-item h3 {
+            color: var(--cor-branco);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .resultado-item p {
+            color: #cccccc;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        /* NOVA: Seção Foto com Alunas */
+        .foto-alunas-section {
+            padding: 80px 0;
+            background: var(--cor-preto);
+        }
+        
+        .foto-alunas-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .foto-panoramica {
+            width: 100%;
+            height: 400px;
+            border-radius: 25px;
+            object-fit: cover;
+            border: 3px solid var(--cor-vermelho);
+            box-shadow: var(--brilho-vermelho);
+        }
+        
+        .legenda-foto {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: var(--cor-branco);
+            font-style: italic;
+        }
+        
+        /* Seção FAQ */
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            margin-bottom: 20px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 0, 60, 0.2);
+            transition: var(--transicao);
+        }
+        
+        .faq-item:hover {
+            border-color: var(--cor-vermelho);
+        }
+        
+        .faq-pergunta {
+            padding: 25px 35px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.3);
+            color: var(--cor-branco);
+        }
+        
+        .faq-pergunta i {
+            color: var(--cor-vermelho);
+            transition: var(--transicao);
+        }
+        
+        .faq-resposta {
+            padding: 0 35px;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transicao);
+            color: #cccccc;
+        }
+        
+        .faq-item.ativo .faq-resposta {
+            padding: 0 35px 35px 35px;
+            max-height: 500px;
+        }
+        
+        .faq-item.ativo .faq-pergunta i {
+            transform: rotate(180deg);
+        }
+        
+        /* Seção CTA Final */
+        .cta-final {
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-final::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(255, 0, 60, 0.2) 0%, transparent 70%);
+            z-index: 1;
+        }
+        
+        .cta-final > .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cta-final h2 {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            background: linear-gradient(90deg, #ff003c, #ff9900);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .garantia {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255, 215, 0, 0.1);
+            padding: 25px 40px;
+            border-radius: 60px;
+            margin: 40px 0;
+            border: 2px solid var(--cor-dourado);
+            box-shadow: var(--brilho-dourado);
+            backdrop-filter: blur(10px);
+        }
+        
+        .garantia i {
+            font-size: 2.5rem;
+            margin-right: 20px;
+            color: var(--cor-dourado);
+            text-shadow: var(--brilho-dourado);
+        }
+        
+        .garantia h4 {
+            font-size: 1.5rem;
+            color: var(--cor-dourado);
+        }
+        
+        .contador {
+            display: inline-block;
+            background: var(--gradiente-vermelho);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: 1.3rem;
+            margin: 30px 0;
+            box-shadow: var(--brilho-vermelho);
+            animation: pulsar 2s infinite;
+        }
+        
+        /* Rodapé */
+        footer {
+            padding: 80px 0 40px;
+            background: #000;
+            color: #888;
+            border-top: 5px solid var(--cor-vermelho);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-logo {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .footer-logo h3 {
+            color: var(--cor-vermelho);
+            margin-bottom: 25px;
+            font-size: 2rem;
+            text-shadow: var(--brilho-vermelho);
+        }
+        
+        .footer-links {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-links h4 {
+            color: var(--cor-branco);
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-links h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gradiente-vermelho);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: var(--transicao);
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-links a:hover {
+            color: var(--cor-vermelho);
+            transform: translateX(5px);
+        }
+        
+        .footer-links a i {
+            margin-right: 10px;
+            width: 20px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 0, 60, 0.1);
+            border-radius: 50%;
+            color: var(--cor-vermelho);
+            font-size: 1.5rem;
+            transition: var(--transicao);
+        }
+        
+        .social-icons a:hover {
+            background: var(--gradiente-vermelho);
+            color: white;
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* Animações (MANTIDAS ORIGINAIS) */
+        @keyframes flutuar {
+            0%, 100% { transform: perspective(1000px) rotateY(-10deg) translateY(0); }
+            50% { transform: perspective(1000px) rotateY(-10deg) translateY(-30px); }
+        }
+        
+        @keyframes pulsar {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        /* Efeitos de brilho para títulos */
+        .titulo-brilho {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .titulo-brilho::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 10%;
+            width: 80%;
+            height: 5px;
+            background: var(--gradiente-vermelho);
+            border-radius: 5px;
+            filter: blur(5px);
+        }
+        
+        /* Responsividade */
+        @media (max-width: 1200px) {
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+            
+            .cta-final h2 {
+                font-size: 3rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .hero-content, .soluçao-content, .autoridade-content, .professor-content {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero-influencer {
+                right: 20px;
+                width: 180px;
+            }
+            
+            .badge-hero {
+                top: 20px;
+                left: 10px;
+            }
+            
+            .professor-badge {
+                position: relative;
+                bottom: auto;
+                left: auto;
+                margin-top: 30px;
+                display: inline-block;
+                transform: none;
+            }
+            
+            .cta-final h2 {
+                font-size: 2.5rem;
+            }
+            
+            section {
+                padding: 80px 0;
+            }
+            
+            .foto-panoramica {
+                height: 300px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .btn {
+                padding: 18px 40px;
+                font-size: 1.1rem;
+            }
+            
+            .soluçao-text h2, .cta-final h2 {
+                font-size: 2.2rem;
+            }
+            
+            .badge-autoridade {
+                position: relative;
+                bottom: auto;
+                right: auto;
+                margin-top: 30px;
+                display: inline-block;
+                transform: none;
+            }
+            
+            .garantia {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 30px;
+            }
+            
+            .garantia i {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .resultados-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .galeria-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .foto-panoramica {
+                height: 250px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero {
+                padding: 100px 0 80px;
+            }
+            
+            .btn {
+                padding: 16px 35px;
+                font-size: 1rem;
+            }
+            
+            .problema-lista {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+            
+            .hero-influencer {
+                width: 150px;
+                right: 10px;
+            }
+            
+            .foto-panoramica {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- SEÇÃO 1 – HERO BOMBÁSTICO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>RECUPERE SUAS ARTICULAÇÕES EM <span class="destaque">30 DIAS</span> OU DEVOLVEMOS SEU DINHEIRO!</h1>
+                    <p>A fórmula <span class="destaque-neon">JOINT ESSENTIAL</span> com Colágeno Tipo 2 UC-II® que já revolucionou a vida de mais de <strong class="destaque">25.000 pessoas</strong> com dores articulares, devolvendo liberdade de movimento.</p>
+                    <a href="https://mercadolivre.com/sec/2geUELZ" class="btn"><i class="fas fa-bone"></i> QUERO RECUPERAR MINHAS ARTICULAÇÕES</a>
+                    <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;"><i class="fas fa-bolt"></i> <strong>OFERTA RELÂMPAGO:</strong> Últimos frascos com 45% de desconto!</p>
+                </div>
+                <div class="hero-visual">
+                    <div class="badge-hero">
+                        <i class="fas fa-certificate"></i> PATENTE INTERNACIONAL
+                    </div>
+                    <img src="https://i.ibb.co/gL8wtQdr/38-Sem-T-tulo-20260101204146.jpg" alt="JOINT ESSENTIAL - Colágeno Tipo 2 UC-II" class="hero-product">
+                    <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dr. Lucas Mendes - Especialista em Ortopedia" class="hero-influencer">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: Galeria do Produto -->
+    <section class="galeria-produto bg-cinza">
+        <div class="container">
+            <h2 class="text-center mb-50 titulo-brilho">O PRODUTO QUE ESTÁ REVOLUCIONANDO A SAÚDE ARTICULAR</h2>
+            <div class="galeria-container">
+                <div>
+                    <img src="https://i.ibb.co/vxcTbDqP/32-Sem-T-tulo-20260101175059.jpg" alt="JOINT ESSENTIAL - Frasco Fechado" class="produto-foto">
+                    <p class="produto-legenda">Frasco premium com 60 cápsulas - 1 mês de tratamento</p>
+                </div>
+                <div>
+                    <img src="https://i.ibb.co/JRJWTWxj/34-Sem-T-tulo-20260101183551.jpg" alt="JOINT ESSENTIAL - Cápsulas" class="produto-foto">
+                    <p class="produto-legenda">Cápsulas de alta absorção com tecnologia UC-II®</p>
+                </div>
+                <div>
+                    <img src="https://i.ibb.co/Kc2kQpbm/35-Sem-T-tulo-20260101185518.jpg" alt="JOINT ESSENTIAL - Embalagem Completa" class="produto-foto">
+                    <p class="produto-legenda">Kit completo com manual de uso e garantia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 2 – PROBLEMA + DESEJO -->
+    <section class="bg-cinza">
+        <div class="container">
+            <h2 class="text-center mb-50 titulo-brilho">CANSADO DE VIVER COM DORES NAS ARTICULAÇÕES?</h2>
+            <div class="problema-lista">
+                <div class="problema-item">
+                    <i class="fas fa-person-cane"></i>
+                    <h3>DORES AO MOVIMENTAR</h3>
+                    <p>Acorda com rigidez, sente dor ao subir escadas ou fazer atividades simples do dia a dia?</p>
+                </div>
+                <div class="problema-item">
+                    <i class="fas fa-running"></i>
+                    <h3>LIMITAÇÃO FÍSICA</h3>
+                    <p>Já abandonou esportes, caminhadas ou hobbies porque as articulações não acompanham mais?</p>
+                </div>
+                <div class="problema-item">
+                    <i class="fas fa-pills"></i>
+                    <h3>DEPENDÊNCIA DE ANTI-INFLAMATÓRIOS</h3>
+                    <p>Vive tomando remédios para aliviar a dor, mas sabe que só está mascarando o problema?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SEÇÃO 3 – SOLUÇÃO / PRODUTO -->
+    <section class="bg-preto">
+        <div class="container">
+            <div class="soluçao-content">
+                <div class="soluçao-visual">
+                    <img src="https://i.ibb.co/Fkg0y6Hh/IMG-20260101-195200.jpg" alt="JOINT ESSENTIAL - Fórmula Avançada" class="soluçao-product">
+                </div>
+                <div class="soluçao-text">
+                    <h2>O COLÁGENO QUE VAI <span class="destaque-neon">REGENERAR</span> SUAS ARTICULAÇÕES</h2>
+                    <p>O <strong class="destaque">JOINT ESSENTIAL</strong> não é colágeno comum. É <strong class="destaque-neon">COLÁGENO TIPO 2 UC-II®</strong> - a forma mais avançada e biodisponível, com estudos clínicos que comprovam sua eficácia na regeneração da cartilagem.</p>
+                    
+                    <div class="beneficios-lista">
+                        <div class="beneficio-item">
+                            <i class="fas fa-heart-pulse"></i>
+                            <div>
+                                <h4>REGENERA A CARTILAGEM</h4>
+                                <p>Estimula a reconstrução natural da cartilagem articular danificada</p>
+                            </div>
+                        </div>
+                        <div class="beneficio-item">
+                            <i class="fas fa-ban"></i>
+                            <div>
+                                <h4>REDUZ INFLAMAÇÕES</h4>
+                                <p>Ação anti-inflamatória natural que diminui inchaço e dor</p>
+                            </div>
+                        </div>
+                        <div class="beneficio-item">
+                            <i class="fas fa-person-running"></i>
+                            <div>
+                                <h4>MOBILIDADE RESTAURADA</h4>
+                                <p>Devolve a flexibilidade e amplitude de movimento perdidas</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://mercadolivre.com/sec/2geUELZ" class="btn"><i class="fas fa-capsules"></i> QUERO A FÓRMULA COMPLETA</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 4 – AUTORIDADE / ESPECIALISTA -->
+    <section class="bg-vermelho">
+        <div class="container">
+            <div class="autoridade-content">
+                <div class="autoridade-text">
+                    <h2 class="mb-30">DR. LUCAS MENDES: REFERÊNCIA EM SAÚDE ARTICULAR</h2>
+                    <p>Há 15 anos, Dr. Lucas se especializou em ortopedia e nutrologia esportiva. Hoje, é <strong>referência com mais de 500 cirurgias articulares realizadas</strong> e consultor das principais equipes esportivas do país.</p>
+                    <p>"Durante anos, tratei pacientes com medicamentos que só aliviavam sintomas temporariamente. Foi então que mergulhei na pesquisa do Colágeno Tipo 2 UC-II®. Os resultados foram tão transformadores que decidi criar uma fórmula acessível para todos."</p>
+                    <p><i class="fas fa-graduation-cap"></i> <strong>Pós-doutor em Medicina Regenerativa</strong> pela Universidade de Harvard</p>
+                    <p><i class="fas fa-microphone"></i> <strong>Palestrante internacional</strong> nos maiores congressos de ortopedia do mundo</p>
+                </div>
+                <div class="autoridade-visual">
+                    <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dr. Lucas Mendes - Especialista" class="autoridade-img">
+                    <div class="badge-autoridade">
+                        <i class="fas fa-award"></i> +25K PACIENTES REABILITADOS
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: Professor Kakau -->
+    <section class="professor-section">
+        <div class="container">
+            <div class="professor-content">
+                <div class="professor-visual">
+                    <img src="https://i.ibb.co/xSsv3G3T/Kakau-empresario.jpg" alt="Professor Kakau - Educação Física" class="professor-img">
+                    <div class="professor-badge">
+                        <i class="fas fa-globe-americas"></i> 20+ ANOS DE EXPERIÊNCIA
+                    </div>
+                </div>
+                <div class="professor-text">
+                    <h2 class="mb-30 titulo-brilho">PROFESSOR KAKAU: REFERÊNCIA INTERNACIONAL EM EDUCAÇÃO FÍSICA</h2>
+                    <p>Com mais de <strong>20 anos de experiência</strong> em educação física e dança, o Professor Kakau é uma referência internacional, atuando como professor em diversas empresas na Rússia e ministrando aulas em vários países.</p>
+                    <p>Sua trajetória inclui formação nas melhores instituições de educação física da Europa e vasta experiência com atletas de alto rendimento, bailarinos profissionais e pessoas que buscam qualidade de vida através do movimento.</p>
+                    
+                    <div class="professor-depoimento">
+                        <p>"Trabalho há décadas com pessoas que dependem de suas articulações para viver bem e performar no mais alto nível. Atletas, bailarinos, profissionais que passam o dia em movimento - todos precisam de articulações saudáveis."</p>
+                        <p>"Recomendo o JOINT ESSENTIAL porque vi na prática a diferença que o Colágeno Tipo 2 UC-II® faz. Meus alunos na Rússia, muitos deles executivos de grandes empresas que sofriam com dores nas articulações por conta do estresse e má postura, tiveram resultados transformadores."</p>
+                        <p><strong>Professor Kakau</strong><br>
+                        <span style="color: var(--cor-neon);">Educador Físico Internacional • Especialista em Biomecânica</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 5 – BENEFÍCIOS / RESULTADOS -->
+    <section class="bg-preto">
+        <div class="container">
+            <h2 class="text-center mb-50 titulo-brilho">RESULTADOS COMPROVADOS CIENTIFICAMENTE</h2>
+            <div class="resultados-grid">
+                <div class="resultado-item">
+                    <div class="numero">94%</div>
+                    <h3>REDUÇÃO DA DOR</h3>
+                    <p>Dos usuários relatam diminuição significativa da dor articular em 30 dias</p>
+                </div>
+                <div class="resultado-item">
+                    <div class="numero">+82%</div>
+                    <h3>MOBILIDADE</h3>
+                    <p>Aumento médio na flexibilidade e amplitude de movimento após 60 dias</p>
+                </div>
+                <div class="resultado-item">
+                    <div class="numero">-78%</div>
+                    <h3>INFLAMAÇÃO</h3>
+                    <p>Redução nos marcadores inflamatórios em exames de laboratório</p>
+                </div>
+                <div class="resultado-item">
+                    <div class="numero">60 DIAS</div>
+                    <h3>GARANTIA TOTAL</h3>
+                    <p>Devolução integral se não sentir melhora na mobilidade e redução da dor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: Foto com Alunas -->
+    <section class="foto-alunas-section">
+        <div class="container">
+            <h2 class="text-center mb-50 titulo-brilho">COMUNIDADE DE TRANSFORMAÇÃO</h2>
+            <div class="foto-alunas-container">
+                <img src="https://i.ibb.co/rRrMk860/Ultima-imagem.jpg" alt="Professor Kakau com suas alunas na Rússia" class="foto-panoramica">
+                <p class="legenda-foto">Professor Kakau compartilhando conhecimento sobre saúde articular com alunas em Moscou, Rússia</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 6 – FAQ -->
+    <section class="bg-cinza">
+        <div class="container">
+            <h2 class="text-center mb-50 titulo-brilho">PERGUNTAS FREQUENTES SOBRE COLÁGENO TIPO 2</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-pergunta">
+                        <span>Qual a diferença entre Colágeno Tipo 2 e colágeno comum?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-resposta">
+                        <p><strong class="destaque">ENORME DIFERENÇA!</strong> O Colágeno Tipo 2 UC-II® é específico para articulações - representa 50-60% de toda proteína na cartilagem. Colágenos comuns (tipos 1 e 3) são para pele, cabelo e unhas. Nosso produto é <strong>focado exclusivamente na saúde articular</strong> com moléculas não desnaturadas que o corpo reconhece e utiliza onde realmente importa.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-pergunta">
+                        <span>Quanto tempo até eu sentir alívio das dores?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-resposta">
+                        <p><strong class="destaque-neon">PRIMEIRAS SEMANAS:</strong> A maioria dos usuários sente diminuição da rigidez matinal entre 7-14 dias. <strong>30 DIAS:</strong> Redução significativa da dor ao movimentar-se. <strong>60 DIAS:</strong> Restauração perceptível da mobilidade e flexibilidade. <strong>90 DIAS:</strong> Regeneração articular profunda - você volta a fazer atividades que havia abandonado.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-pergunta">
+                        <span>Preciso tomar para o resto da vida?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-resposta">
+                        <p>Não necessariamente. Recomendamos um <strong class="destaque">ciclo mínimo de 3 meses</strong> para regeneração significativa. Após esse período, muitos usuários mantêm os resultados com dosagem de manutenção (1 cápsula ao dia) ou pausas periódicas. O corpo continua o processo de regeneração que foi estimulado.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-pergunta">
+                        <span>Funciona para artrose/artrite já estabelecida?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-resposta">
+                        <p><strong class="destaque">SIM, ESPECIALMENTE PARA ESSES CASOS!</strong> O Colágeno Tipo 2 UC-II® tem estudos específicos para osteoartrite (artrose). Ele atua modulando a resposta imunológica, reduzindo o ataque à cartilagem e estimulando sua reconstrução. Resultados podem variar conforme o estágio, mas mesmo em casos avançados há melhora significativa na qualidade de vida.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-pergunta">
+                        <span>Posso tomar junto com outros medicamentos?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-resposta">
+                        <p>O JOINT ESSENTIAL é um <strong class="destaque-neon">suplemento alimentar 100% natural</strong> sem interações medicamentosas conhecidas. No entanto, sempre recomendamos consultar seu médico, especialmente se estiver em uso contínuo de anti-inflamatórios ou anticoagulantes. Muitos médicos indicam nosso produto justamente para reduzir a dependência de medicamentos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 7 – CTA FINAL BOMBÁSTICO -->
+    <section class="cta-final bg-preto">
+        <div class="container">
+            <h2>HOJE É O DIA DE RECUPERAR SUA LIBERDADE</h2>
+            <p class="mb-30" style="font-size: 1.3rem;">Não aceite viver com limitações. Volte a se mover sem dor, sem rigidez, sem medo. Junte-se aos 25.000+ que já recuperaram suas articulações e <strong class="destaque">REDESCUBRA O PRAZER DE UM CORPO EM MOVIMENTO</strong>.</p>
+            
+            <div class="contador">
+                <i class="fas fa-clock"></i> ÚLTIMOS FRASCOS COM 45% DE DESCONTO
+            </div>
+            
+            <div class="garantia">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                    <h4>GARANTIA DE 60 DIAS</h4>
+                    <p>Se em 2 meses você não sentir melhora significativa, devolvemos 100% do seu investimento.</p>
+                </div>
+            </div>
+            
+            <div class="mb-50"></div>
+            
+            <a href="https://mercadolivre.com/sec/2geUELZ" class="btn" style="padding: 25px 60px; font-size: 1.4rem;">
+                <i class="fas fa-capsules"></i> QUERO RECUPERAR MINHAS ARTICULAÇÕES
+            </a>
+            
+            <p style="margin-top: 30px; font-size: 0.9rem; opacity: 0.8;">
+                <i class="fas fa-lock"></i> Pagamento 100% seguro • Frete grátis para todo Brasil • Suporte nutricional inclus
+            </p>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>JOINT ESSENTIAL</h3>
+                    <p>A fórmula de Colágeno Tipo 2 UC-II® que já transformou mais de 25.000 vidas. Saúde articular com comprovação científica.</p>
+                    <div class="social-icons">
+                       
+                        <a href="https://www.instagram.com/antoniokakauluz?igsh=MXVnc2xsMXdxN3k3aw=="><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtu.be/JnT41fI8oK4?si=gX81IdxouZR_fljH"><i class="fab fa-youtube"></i></a>
+                       
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>SAÚDE ARTICULAR</h4>
+                    <ul>
+                        <li><a href="#produto"><i class="fas fa-bone"></i> Colágeno Tipo 2</a></li>
+                        <li><a href="#resultados"><i class="fas fa-chart-line"></i> Estudos Científicos</a></li>
+                        <li><a href="#garantia"><i class="fas fa-shield-alt"></i> Garantia</a></li>
+                        <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    </ul>
+                </div>
+                
+              
+                
+                <div class="footer-links">
+                    <h4>ATENDIMENTO</h4>
+                    <ul>
+                        <li><a href="mailto:suporte@jointessential.com"><i class="fas fa-envelope"></i> Antonio.kakaubr@mail.com</a></li>
+                        
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> São Paulo - SP</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 JOINT ESSENTIAL. Todos os direitos reservados.</p>
+                <p>Este produto é um suplemento alimentar. Não se destina a diagnosticar, tratar, curar ou prevenir qualquer doença. Os resultados podem variar conforme o indivíduo.</p>
+                <p style="margin-top: 15px; color: var(--cor-vermelho);"><i class="fas fa-exclamation-triangle"></i> Consulte um médico antes de iniciar qualquer suplementação, especialmente se estiver grávida, amamentando ou em uso de medicamentos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const pergunta = item.querySelector('.faq-pergunta');
+                
+                pergunta.addEventListener('click', () => {
+                    // Fecha todos os outros itens
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('ativo');
+                        }
+                    });
+                    
+                    // Alterna o item clicado
+                    item.classList.toggle('ativo');
+                });
+            });
+            
+            // Smooth scroll para os botões de compra
+            const buyButtons = document.querySelectorAll('a[href="#compra"]');
+            buyButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Efeito sonoro (em um site real)
+                    console.log("🦴 JOINT ESSENTIAL: Redirecionando para o checkout explosivo!");
+                    
+                    // Mostrar modal de checkout (simulação)
+                    const modalHTML = `
+                        <div style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); display:flex; justify-content:center; align-items:center; z-index:9999;">
+                            <div style="background:linear-gradient(135deg, #0a0a0a, #1a1a1a); padding:40px; border-radius:20px; border:3px solid #ff003c; box-shadow:0 0 50px rgba(255,0,60,0.7); max-width:500px; text-align:center;">
+                                <h2 style="color:#ff003c; margin-bottom:20px;">🚀 CHECKOUT EXPLOSIVO</h2>
+                                <p style="color:#fff; margin-bottom:30px;">Você será redirecionado para nossa página de pagamento 100% segura!</p>
+                                <div style="display:flex; gap:20px; justify-content:center;">
+                                    <button onclick="this.parentElement.parentElement.parentElement.remove()" style="background:#333; color:#fff; border:none; padding:15px 30px; border-radius:10px; cursor:pointer;">Cancelar</button>
+                                    <button onclick="window.location.href='https://pagamento.jointessential.com'" style="background:linear-gradient(135deg, #ff003c, #ff3300); color:#fff; border:none; padding:15px 30px; border-radius:10px; font-weight:bold; cursor:pointer;">Continuar</button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    // Adiciona o modal ao corpo
+                    const modalDiv = document.createElement('div');
+                    modalDiv.innerHTML = modalHTML;
+                    document.body.appendChild(modalDiv);
+                });
+            });
+            
+            // Adiciona animação de entrada suave para as seções
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Aplica animação de entrada nas seções
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+                observer.observe(section);
+            });
+            
+            // Efeito de contador regressivo
+            const contador = document.querySelector('.contador');
+            if (contador) {
+                let desconto = 45;
+                setInterval(() => {
+                    if (desconto > 30) {
+                        desconto--;
+                        contador.innerHTML = `<i class="fas fa-clock"></i> ÚLTIMOS FRASCOS COM ${desconto}% DE DESCONTO`;
+                    }
+                }, 30000); // Diminui uma unidade a cada 30 segundos
+            }
+        });
+    </script>
+</body>
+</html>
