@@ -45,22 +45,25 @@
       color: #f0f0f0;
     }
 
-    .download-btn {
-      display: inline-block;
-      padding: 20px 50px;
-      font-size: 1.3rem;
-      font-weight: 700;
-      background: linear-gradient(90deg, #ffcc00, #ff9900);
-      color: #0f0f0f;
-      border-radius: 15px;
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+    /* Mude o nome da classe para algo mais apropriado */
+.btn-principal {
+  display: inline-block;
+  padding: 20px 50px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffcc00, #ff9900);
+  color: #0f0f0f;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none; /* Importante para links */
+  text-align: center;
+}
 
-    .download-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 25px #ffcc00;
-    }
+.btn-principal:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #ffcc00;
+}
 
     /* EMOJIS ANIMADOS */
     .emoji {
@@ -118,9 +121,9 @@
     <p>Agradecemos a cinfiança!!🌟</p>
 
     
-    <!-- BOTÃO PARA PÁGINA PRINCIPAL --> 
-<a href="https://jointsproduct.github.io/Sa-de-Articular/index.html" class="download-btn">
-    Voltar a página principal
+    <!-- Atualize a classe no HTML -->
+<a href="https://jointsproduct.github.io/Sa-de-Articular/index.html" class="btn-principal">
+  Voltar a página principal
 </a>
 
     <!-- ESPAÇO PARA IMAGEM OPCIONAL -->
